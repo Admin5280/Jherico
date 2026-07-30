@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background: #0A0A0A;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-montserrat), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Bebas Neue display headings — used for big brand titles */
+.font-display { letter-spacing: 0.02em; }
+
+*::-webkit-scrollbar { height: 8px; width: 8px; }
+*::-webkit-scrollbar-thumb { background: #2C2C2C; border-radius: 6px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator { filter: invert(0.7); }
+
+/* recharts dark tweaks */
+.recharts-cartesian-grid line { stroke: #2C2C2C; }
+.recharts-text { fill: #9A9A9A; }
+.recharts-default-tooltip { background: #161616 !important; border: 1px solid #2C2C2C !important; border-radius: 10px; }
+
+/* hide scrollbar on horizontal chip rows */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* prevent iOS zoom on focus for the technician UI (inputs >= 16px) */
+@media (max-width: 640px) {
+  input, select, textarea { font-size: 16px; }
+}
