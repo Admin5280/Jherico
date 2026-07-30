@@ -46,10 +46,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   // mirror that on the client so admin action buttons are usable.
   const role = profile?.role ?? (!configured ? "Admin" : undefined);
 
-  // route away from pages this role can't open (once loaded & configured)
+  // routing guard (runs once loaded)
   useEffect(() => {
-    if (loading || !configured || !profile) return;
+    if (loading || !configured) return;        // demo mode (unconfigured) stays open
     if (pathname === "/login") return;
+    if (!profile) {                            // configured but not signed in → go log in
+      router.replace("/login");
+      return;
+    }
     if (!canAccessPage(role, pathname)) {
       router.replace(landingPage(role));
     }
