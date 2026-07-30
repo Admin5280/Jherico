@@ -21,7 +21,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     return (
       <div className="min-h-screen bg-base pb-20">
         <header className="sticky top-0 z-30 bg-base/95 backdrop-blur border-b border-line px-4 py-3 flex items-center gap-2">
-          <div className="h-7 w-7 rounded bg-accent flex items-center justify-center font-display text-lg text-white leading-none">AD</div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/mascot.svg" alt="Auto Dude" className="h-9 w-9 object-contain" />
           <span className="font-head font-bold tracking-wide text-ink">AUTO DUDE</span>
           <span className="ml-auto text-[11px] text-muted uppercase tracking-wide">Technician</span>
         </header>
@@ -52,6 +53,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <div className="flex-1 min-w-0 flex flex-col">
         <header className="sticky top-0 z-30 bg-base/90 backdrop-blur border-b border-line px-4 py-2.5 flex items-center gap-3 md:hidden">
           <button className="text-ink text-xl px-1" onClick={() => setOpen(true)} aria-label="Menu">☰</button>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/mascot.svg" alt="Auto Dude" className="h-8 w-8 object-contain" />
           <span className="font-head font-bold tracking-wide text-ink">AUTO DUDE</span>
         </header>
 

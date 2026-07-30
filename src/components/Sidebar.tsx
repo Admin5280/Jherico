@@ -29,7 +29,8 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
     <aside className="w-60 shrink-0 bg-surface border-r border-line min-h-screen flex flex-col">
       <div className="px-5 py-5 border-b border-line">
         <div className="flex items-center gap-2.5">
-          <div className="h-10 w-10 rounded-lg bg-accent flex items-center justify-center font-display text-2xl text-white leading-none">AD</div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/mascot.svg" alt="Auto Dude" className="h-11 w-11 object-contain shrink-0" />
           <div>
             <div className="text-sm font-head font-bold text-ink leading-tight tracking-wide">AUTO DUDE</div>
             <div className="text-[10px] text-muted uppercase tracking-wide">Command Center</div>

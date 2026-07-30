@@ -35,7 +35,8 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-base p-4">
       <div className="w-full max-w-sm">
         <div className="flex flex-col items-center mb-6">
-          <div className="h-16 w-16 rounded-xl bg-accent flex items-center justify-center font-display text-4xl text-white leading-none mb-3">AD</div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/mascot.svg" alt="Auto Dude" className="h-28 w-auto object-contain mb-3" />
           <div className="text-2xl font-head font-bold text-ink tracking-wide">AUTO DUDE</div>
           <div className="text-xs text-muted uppercase tracking-wide">Command Center · New Braunfels, TX</div>
         </div>
